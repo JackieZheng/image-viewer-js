@@ -1,6 +1,6 @@
 {
   "name": "@jackiezhengchina/image-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight image viewer plugin with zoom, drag, double-click fit, multi-image navigation, and iframe proxy support",
   "main": "dist/image-viewer.min.js",
   "module": "src/image-viewer.js",
