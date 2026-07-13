@@ -1,106 +1,89 @@
 # @jackiezhengchina/image-viewer
 
-A lightweight, zero-dependency JavaScript image viewer plugin with zoom, drag, double-click fit, multi-image navigation, and iframe proxy support.
+一个简洁强大的网页图片查看器，支持键盘/鼠标手势、全屏、缩放、旋转、拖拽等功能。
 
-## Features
+## 📦 CDN（全球加速）
 
-- 🖼️ **Full-screen Preview** - Click any image to view in fullscreen overlay
-- 🔍 **Zoom** - Mouse wheel zoom with configurable step, min/max limits
-- 👆 **Drag** - Click and drag to pan zoomed images
-- ⚡ **Double-click** - Double-click to fit image to screen
-- ⬅️➡️ **Navigation** - Left/right arrows or buttons to switch between images
-- ⌨️ **Keyboard Shortcuts** - Escape, Arrow keys, +/-, Home/End
-- 📱 **Touch Support** - Touch drag for mobile devices
-- 🖼️ **Iframe Proxy** - Automatically injects viewer into same-origin iframes
-- 🎯 **Smart Filtering** - Skip small icons/UI decorations (< 150px by default)
+jsDelivr:
+```html
+<script src="https://cdn.jsdelivr.net/npm/@jackiezhengchina/image-viewer@1.0.1/dist/image-viewer.min.js"></script>
+```
 
-## Installation
+unpkg:
+```html
+<script src="https://unpkg.com/@jackiezhengchina/image-viewer@1.0.1/dist/image-viewer.min.js"></script>
+```
 
+## Install
+
+npm:
 ```bash
 npm install @jackiezhengchina/image-viewer
 ```
 
-Or include directly via CDN:
+## Quick Start
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@jackiezhengchina/image-viewer/dist/image-viewer.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="node_modules/@jackiezhengchina/image-viewer/dist/image-viewer.css">
+</head>
+<body>
+  <img src="example.jpg" class="image-viewer" alt="示例图片">
+  <script src="node_modules/@jackiezhengchina/image-viewer/dist/image-viewer.min.js"></script>
+  <script>
+    ImageViewer.init('.image-viewer');
+  </script>
+</body>
+</html>
 ```
 
-Or use unpkg:
+## Features
 
-```html
-<script src="https://unpkg.com/@jackiezhengchina/image-viewer/dist/image-viewer.min.js"></script>
-```
-
-## Usage
-
-### Basic
-
-```html
-<img src="photo.jpg" alt="Photo">
-
-<script>
-  // Auto-bind on double-click (recommended)
-  ImageViewer.config.autoBind = true;
-  ImageViewer.init();
-</script>
-```
-
-### Manual Open
-
-```javascript
-// Open specific image
-ImageViewer.open(document.querySelector('img'));
-
-// Close viewer
-ImageViewer.close();
-
-// Reset to fit screen
-ImageViewer.reset();
-```
-
-### Configuration
-
-```javascript
-ImageViewer.config = {
-  zoomStep:   0.12,      // Zoom step per wheel tick
-  maxZoom:    8,         // Maximum zoom level
-  minZoom:    0.1,       // Minimum zoom level
-  initZoom:   0,         // 0 = auto-fit, >0 = fixed initial scale
-  overlayBg:  'rgba(0,0,0,.92)',  // Overlay background
-  closeColor: '#fff',    // Close button color
-  transitionMs: 260,     // Animation duration (ms)
-  minPreviewPx: 150,     // Skip images smaller than this
-  autoBind:  true,       // Auto-bind double-click listener
-};
-```
+- 🖱️ 鼠标滚轮缩放、双击全屏、右键菜单
+- ⌨️ 键盘快捷键（方向键旋转、+/-缩放、F全屏、ESC退出）
+- 📱 移动端触摸手势支持
+- 🎨 深色/浅色主题跟随系统
+- 🌐 支持任意图片格式（支持 CORS 的图床均可）
+- 📦 UMD 格式，天然兼容所有前端框架
 
 ## API
 
-| Method | Description |
-|--------|-------------|
-| `ImageViewer.open(imgEl)` | Open viewer with specific image |
-| `ImageViewer.close()` | Close viewer |
-| `ImageViewer.reset()` | Reset zoom and position |
-| `ImageViewer.init()` | Initialize iframe proxy (auto-called if autoBind=true) |
-| `ImageViewer.config` | Configuration object |
+```js
+// 初始化
+ImageViewer.init(selector, options);
+
+// 打开指定图片
+ImageViewer.open('https://example.com/image.jpg');
+
+// 全屏模式
+ImageViewer.toggleFullscreen();
+
+// 销毁
+ImageViewer.destroy();
+```
+
+## Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `zoomStep` | number | 0.1 | 每次缩放步进 |
+| `maxZoom` | number | 5 | 最大缩放倍数 |
+| `minZoom` | number | 0.1 | 最小缩放倍数 |
+| `theme` | string | 'auto' | 'light' / 'dark' / 'auto' |
 
 ## Keyboard Shortcuts
 
 | Key | Action |
 |-----|--------|
-| `Escape` | Close viewer |
-| `←` / `→` | Previous / next image |
-| `+` / `=` | Zoom in |
-| `-` | Zoom out |
-| `Home` | First image |
-| `End` | Last image |
-
-## Browser Support
-
-- Chrome, Firefox, Safari, Edge (modern versions)
-- IE11 not supported
+| `+` / `=` | 放大 |
+| `-` | 缩小 |
+| `←` `→` | 旋转90° |
+| `F` | 全屏 |
+| `ESC` | 退出 |
+| `R` | 重置视图 |
 
 ## License
 
-MIT © JackieZheng
+MIT
