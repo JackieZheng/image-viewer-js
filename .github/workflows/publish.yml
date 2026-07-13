@@ -1,4 +1,4 @@
-﻿name: Publish to npm
+name: Publish to npm
 
 on:
   push:
@@ -26,6 +26,8 @@ jobs:
           npm run build
 
       - name: Publish
-        run: npm publish --access public
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> ~/.npmrc
+          npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
