@@ -1,0 +1,33 @@
+{
+  "name": "@jackiezheng/image-viewer",
+  "version": "1.0.0",
+  "description": "Lightweight image viewer plugin with zoom, drag, double-click fit, multi-image navigation, and iframe proxy support",
+  "main": "dist/image-viewer.min.js",
+  "module": "src/image-viewer.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "uglifyjs src/image-viewer.js -o dist/image-viewer.min.js -c -m",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "image-viewer",
+    "image-preview",
+    "lightbox",
+    "zoom",
+    "drag",
+    "fullscreen",
+    "iframe"
+  ],
+  "author": "JackieZheng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackieZheng/image-viewer-js"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.0"
+  }
+}
