@@ -6,12 +6,12 @@
 
 jsDelivr:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@jackiezhengchina/image-viewer@1.0.1/dist/image-viewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jackiezhengchina/image-viewer@1.0.2/dist/image-viewer.min.js"></script>
 ```
 
 unpkg:
 ```html
-<script src="https://unpkg.com/@jackiezhengchina/image-viewer@1.0.1/dist/image-viewer.min.js"></script>
+<script src="https://unpkg.com/@jackiezhengchina/image-viewer@1.0.2/dist/image-viewer.min.js"></script>
 ```
 
 ## Install

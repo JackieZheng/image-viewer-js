@@ -1,36 +1,36 @@
-{
-  "name": "@jackiezhengchina/image-viewer",
-  "version": "1.0.1",
-  "description": "Lightweight image viewer plugin with zoom, drag, double-click fit, multi-image navigation, and iframe proxy support",
-  "main": "dist/image-viewer.min.js",
-  "module": "src/image-viewer.js",
-  "files": [
-    "src",
-    "dist"
-  ],
-  "scripts": {
-    "build": "npx mkdirp dist && uglifyjs src/image-viewer.js -o dist/image-viewer.min.js -c -m"
-  },
-  "keywords": [
-    "image-viewer",
-    "image-preview",
-    "lightbox",
-    "zoom",
-    "drag",
-    "fullscreen",
-    "iframe"
-  ],
-  "author": "JackieZheng",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JackieZheng/image-viewer-js.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "devDependencies": {
-    "uglify-js": "^3.17.0",
-    "mkdirp": "^3.0.1"
-  }
+﻿{
+    "name":  "@jackiezhengchina/image-viewer",
+    "version":  "1.0.2",
+    "description":  "Lightweight image viewer plugin with zoom, drag, double-click fit, multi-image navigation, and iframe proxy support",
+    "main":  "dist/image-viewer.min.js",
+    "module":  "src/image-viewer.js",
+    "files":  [
+                  "src",
+                  "dist"
+              ],
+    "scripts":  {
+                    "build":  "npx mkdirp dist \u0026\u0026 uglifyjs src/image-viewer.js -o dist/image-viewer.min.js -c -m"
+                },
+    "keywords":  [
+                     "image-viewer",
+                     "image-preview",
+                     "lightbox",
+                     "zoom",
+                     "drag",
+                     "fullscreen",
+                     "iframe"
+                 ],
+    "author":  "JackieZheng",
+    "license":  "MIT",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/JackieZheng/image-viewer-js.git"
+                   },
+    "publishConfig":  {
+                          "registry":  "https://registry.npmjs.org"
+                      },
+    "devDependencies":  {
+                            "uglify-js":  "^3.17.0",
+                            "mkdirp":  "^3.0.1"
+                        }
 }
