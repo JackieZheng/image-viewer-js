@@ -20,10 +20,16 @@ A lightweight, zero-dependency JavaScript image viewer plugin with zoom, drag, d
 npm install @jackiezhengchina/image-viewer
 ```
 
-Or include directly:
+Or include directly via CDN:
 
 ```html
-<script src="dist/image-viewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jackiezhengchina/image-viewer/dist/image-viewer.min.js"></script>
+```
+
+Or use unpkg:
+
+```html
+<script src="https://unpkg.com/@jackiezhengchina/image-viewer/dist/image-viewer.min.js"></script>
 ```
 
 ## Usage
