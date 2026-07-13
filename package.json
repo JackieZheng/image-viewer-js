@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "uglifyjs src/image-viewer.js -o dist/image-viewer.min.js -c -m",
+    "build": "mkdir -p dist && uglifyjs src/image-viewer.js -o dist/image-viewer.min.js -c -m",
     "prepare": "npm run build"
   },
   "keywords": [
