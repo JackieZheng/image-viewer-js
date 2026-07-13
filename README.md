@@ -1,4 +1,4 @@
-# @jackiezheng/image-viewer
+# @jackiezhengchina/image-viewer
 
 A lightweight, zero-dependency JavaScript image viewer plugin with zoom, drag, double-click fit, multi-image navigation, and iframe proxy support.
 
@@ -17,7 +17,7 @@ A lightweight, zero-dependency JavaScript image viewer plugin with zoom, drag, d
 ## Installation
 
 ```bash
-npm install @jackiezheng/image-viewer
+npm install @jackiezhengchina/image-viewer
 ```
 
 Or include directly:
