@@ -23,7 +23,6 @@ jobs:
       - name: Install & Build
         run: |
           npm install
-          mkdir dist
           npm run build
 
       - name: Publish
